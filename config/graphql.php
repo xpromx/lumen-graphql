@@ -119,6 +119,8 @@ return [
 
         // Support
         'PageInfo'          => 'Xpromx\GraphQL\Type\PageInfoType',
+        'Filter'            => 'Xpromx\GraphQL\Filter\FilterType',
+        'FilterCondition'   => 'Xpromx\GraphQL\Filter\FilterConditionEnum',
     ],
 
     /*
