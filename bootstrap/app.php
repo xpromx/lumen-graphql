@@ -86,8 +86,12 @@ $app->register(App\Providers\AuthServiceProvider::class);
 $app->register(Barryvdh\Cors\ServiceProvider::class);
 $app->configure('cors');
 
+// GraphQL
 $app->configure('graphql');
 $app->register(Folklore\GraphQL\LumenServiceProvider::class);
+
+// Lumen Config
+$app->configure('database');
 
 /*
 |--------------------------------------------------------------------------

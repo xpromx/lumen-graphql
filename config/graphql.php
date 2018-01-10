@@ -100,10 +100,24 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                'users' => 'Xpromx\GraphQL\Examples\Query\UsersQuery',
-                'songs' => 'Xpromx\GraphQL\Examples\Query\SongsQuery'
+
+                // App
+                'users' => 'App\GraphQL\Query\UsersQuery',
+                'user' => 'App\GraphQL\Query\UserQuery',
+                'projects' => 'App\GraphQL\Query\ProjectsQuery',
+                'project' => 'App\GraphQL\Query\ProjectQuery',
+
+                // Project
+
             ],
+
             'mutation' => [
+                // User
+                'CreateUser' => 'App\GraphQL\Mutation\User\CreateUser',
+                'Authenticate' => 'App\GraphQL\Mutation\User\Authenticate',
+
+                // Project
+                'CreateProject' => 'App\GraphQL\Mutation\Project\CreateProject',
 
             ]
         ]
@@ -114,8 +128,13 @@ return [
      * facade like this: GraphQL::type('user')
      */
     'types' => [
-        'user' => 'Xpromx\GraphQL\Examples\Type\UserType',
-        'song' => 'Xpromx\GraphQL\Examples\Type\SongType',
+        // App
+        'User' => 'App\GraphQL\Type\UserType',
+        'Project' => 'App\GraphQL\Type\ProjectType',
+        'UserProject' => 'App\GraphQL\Type\UserProjectType',
+
+        // Project
+
 
         // Support
         'PageInfo'          => 'Xpromx\GraphQL\Type\PageInfoType',
